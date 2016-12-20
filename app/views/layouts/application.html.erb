@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Collective Action</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
+    <%= render 'application/favicon' %>
+  </head>
+
+  <body>
+    <div class = "navbar">
+        <ul class="myMenu">
+          <li><img class="logo" src="<%= asset_path( 'CA-logo.png' ) %>" /></li>
+          <li><%= link_to 'Collective Action', welcome_homepage_path %></li>
+          <li><%=link_to 'Join Us', controller: 'posts'%></li>
+          <li><a href="#donate">Donate(add this page)</a></li>
+          <li><a href="#contact">Contact Us(add this)</a></li>
+        </ul>
+
+        <ul class="userLinks">
+          <% if user_signed_in? %>
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to('Login', new_user_session_path)  %></li>
+          <% end %>
+        </ul>
+    </div>
+
+
+  <%= yield %>
+  <!-- <script src="/Users/Diana/desktop/wdi/projects/organization/app/assets/javascripts/application.js"></script> -->
+  </body>
+</html>
