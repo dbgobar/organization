@@ -2,12 +2,22 @@ body{
   color: #646464;
   background: white;
   margin: auto;
+  /*border-bottom: 40px solid #333;*/
+
 }
 p{
   font-family: 'Lato', sans-serif;
 
 }
-h1{
+h1, h2{
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  border-bottom: 1px solid yellow;
+  color: black;
 
 }
 /*_____NAVBAR_________*/
@@ -75,7 +85,7 @@ li a:hover {
   color: white;
   z-index: 99;
   font-size: 30px;
-    /*text-shadow: 2px 2px 8px #4C0A6E;*/
+    text-shadow: 2px 2px 8px #4C0A6E;
   margin: 0 auto;
   padding: 0 auto;
 
@@ -90,6 +100,16 @@ li a:hover {
   transform-origin: 54% 0;
   transform: rotate(45deg);
   z-index: -1;
+}
+.tag{
+  position: relative;
+  top: -136px;
+  z-index: 100;
+  font-size: 30px;
+  color: white;
+  left: 550px;
+  text-shadow: 2px 2px 8px #4C0A6E;
+    font-family: 'Roboto', sans-serif;
 }
 .coverPic{
   object-fit: cover;
@@ -125,13 +145,34 @@ li a:hover {
   width: 70%;
   height: 100%;
   padding: 0 10px 10px 10px;
-  text-align: center;
+  padding-left: 30px;
 }
 .aboutSection h1{
   text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 0 auto;
+
+}
+.aboutSection h2{
+    text-decoration: underline;
+}
+.aboutSection a{
+  font-family: 'Roboto', sans-serif;
+
+}
+.mission{
+  font-weight: bolder;
+  font-size: 25px;
+  color: black;
+
+}
+.gray{
+  font-weight: bolder;
+  color: black;
 }
 /*_____FOOTER______*/
-/*.contactLinks {
+.contactLinks {
 
 }
 .footer {
@@ -141,12 +182,15 @@ li a:hover {
   width: 100%;
   bottom: 0;
   text-align: center;
+
 }
 .footer a{
   padding-top: 20px;
   text-decoration: none;
   color: white;
-}*/
+  border-bottom: none;
+  font-family: 'Nunito Sans', sans-serif;
+}
 
 /*____SMS Section______*/
 .smsHeader{
@@ -173,6 +217,45 @@ li a:hover {
   border-radius: 15px;
   margin: 5px;
   padding: 5px;
+}
+/*_____DONATE PAGE ______*/
+.donate{
+  display: flex;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.donateSection{
+  border: 1px dotted gray;
+  width: 50%;
+}
+.payPal{
+  border: 1px dotted gray;
+  width: 50%;
+  height: 500px;
+}
+/*______CONTACT PAGE_____*/
+
+.contacts{
+  margin-left: 35%;
+  display: flex;
+  /*border: 1px dotted gray;*/
+  width: 400px;
+  height: 300px;
+  justify-content: center;
+  text-align: center;
+}
+.contacts img{
+  border-radius: 50%;
+}
+.contact1{
+padding: 20px;
+}
+.contact2{
+  padding: 20px;
+}
+/*____Announcements Page_____*/
+.postTitle strong{
+  color: red;
 }
 
 /*____DEVISE PAGES_____*/
