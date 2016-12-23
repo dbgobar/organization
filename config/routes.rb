@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  get "/pages/:page" => "pages#show"
+ 
+  get 'messages/reply'#, to: redirect('welcome/homepage')
 
   devise_for :users
-resources :posts
+  resources :posts
 
-get 'welcome/homepage'
+  get 'messages/homepage'
+  root 'messages#homepage'
 
-root 'welcome#homepage'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resource :messages do
+    collection do
+      post "reply"
+    end
+  end
+
 end

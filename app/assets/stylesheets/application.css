@@ -3,7 +3,13 @@ body{
   background: white;
   margin: auto;
 }
+p{
+  font-family: 'Lato', sans-serif;
 
+}
+h1{
+
+}
 /*_____NAVBAR_________*/
 .logo{
   width: 50px;
@@ -15,7 +21,9 @@ body{
   position: -webkit-sticky;
   top: 0;
   z-index: 1;
+  /*font-family: 'Lato', sans-serif;*/
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -44,8 +52,45 @@ li a:hover {
   float: right;
 }
 
-/*______Home SECTION________*/
+/*______Home Page________*/
+.logoPic{
+  width: 130px;
+  height: 120px;
+  position: relative;
+  left: -150px;
+  top: 410px;
+}
+.tagline{
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 25px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  /*display: inline;*/
+  position: relative;
+  left: 200px;
+  top: -90px;
+  color: white;
+  z-index: 99;
+  font-size: 30px;
+    /*text-shadow: 2px 2px 8px #4C0A6E;*/
+  margin: 0 auto;
+  padding: 0 auto;
 
+}
+
+.tagline:after {
+  content: '';
+  position: absolute;
+  width: 1100%; height: 1100%;;
+  top: 20px; right: -500%;
+  background: rgba(0,0,0,0.5);
+  transform-origin: 54% 0;
+  transform: rotate(45deg);
+  z-index: -1;
+}
 .coverPic{
   object-fit: cover;
   display: flex;
@@ -53,27 +98,99 @@ li a:hover {
   height: 550px;
   z-index: -1;
 }
+.sectionLine{
+
+  width: 100%;
+  position: relative;
+  top: -40px;
+}
 .homePage{
   display: flex;
 
 }
 .section{
   display: flex;
-  border: solid blue 1px;
-  margin-left: 5%;
-  margin-right: 5%;
+  /*border: solid blue 1px;*/
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 40px;
+  margin-top: 0 auto;
 }
 .liveFeed{
   width: 30%;
-  height:100%;;
-  border: solid red 1px;
+  height: 550px;
+  border: solid #333 2px;
 }
 .aboutSection{
   width: 70%;
   height: 100%;
-  border: solid red 1px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
+  text-align: center;
 }
 .aboutSection h1{
   text-align: center;
+}
+/*_____FOOTER______*/
+/*.contactLinks {
+
+}
+.footer {
+  background-color:#333;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+.footer a{
+  padding-top: 20px;
+  text-decoration: none;
+  color: white;
+}*/
+
+/*____SMS Section______*/
+.smsHeader{
+  /*background-color: gray;*/
+  background-color: #333;
+  margin: 0 auto;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  font-size: 17px;
+  font-weight: lighter;
+  color: #E0E1E0;
+}
+.texts{
+  overflow: scroll;
+  height: 500px;
+}
+.smsSeperate{
+  border-bottom: 1px gray dotted;
+}
+.smsBubble{
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  background-color: #CAE5F7;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*____DEVISE PAGES_____*/
+.sign_up{
+  margin-left: 40%;
+}
+.sign_up input{
+  width: 200px;
+}
+.sign_up h2{
+  position: relative;
+  right: -60px;
+}
+
+.sign_in{
+  margin-left: 43%;
+}
+.sign_in h2{
+  position: relative;
+  right: -30px;
 }

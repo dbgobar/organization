@@ -1,9 +1,20 @@
+
 <div class="homePage">
   <img class="coverPic" src="<%= asset_path( 'refugees1.jpg' ) %>" />
+  <img class="logoPic" src="<%= asset_path( 'CA-logo2.png' ) %>" />
 </div>
 
+<div class="tagline"></div>
+
+<div class="sectionLine"><div>
 <div class="section">
-  <div class="liveFeed"> side bar for the twilio (text feed)</div>
+  <div class="liveFeed">
+    <h1 class="smsHeader">H E A R  ·  U S</h1>
+    <div class="texts"
+    <%= render './messages/reply' %>
+    </div>
+  </div>
+
   <div class="aboutSection">
     <h1> Our Mission </h1>
     <%= link_to 'View our Announcements and Events here(posts)', controller: 'posts' %>

@@ -5,6 +5,9 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
@@ -16,8 +19,8 @@
     <div class = "navbar">
         <ul class="myMenu">
           <li><img class="logo" src="<%= asset_path( 'CA-logo.png' ) %>" /></li>
-          <li><%= link_to 'Collective Action', welcome_homepage_path %></li>
-          <li><%=link_to 'Join Us', controller: 'posts'%></li>
+          <li><%= link_to 'Collective Action', messages_homepage_path %></li>
+          <li><%=link_to 'Join Us', posts_path%></li>
           <li><a href="#donate">Donate(add this page)</a></li>
           <li><a href="#contact">Contact Us(add this)</a></li>
         </ul>
@@ -32,7 +35,13 @@
         </ul>
     </div>
 
-  
+  <!-- <footer class="footer">
+    <div class="contactLinks">
+    <%= link_to "Twitter", "http://twitter.com", :target => "_blank" %>
+    <%= link_to "Facebook", "http://facebook.com", :target => "_blank" %>
+  </div>
+  </footer> -->
+
   <%= yield %>
   <!-- <script src="/Users/Diana/desktop/wdi/projects/organization/app/assets/javascripts/application.js"></script> -->
   </body>
