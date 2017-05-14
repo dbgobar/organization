@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
   get "/pages/:page" => "pages#show"
- 
-  get 'messages/reply'#, to: redirect('welcome/homepage')
+
 
   devise_for :users
   resources :posts
 
-  get 'messages/homepage'
-  root 'messages#homepage'
+  get 'welcome/homepage'
+  root 'welcome#homepage'
 
-  resource :messages do
-    collection do
-      post "reply"
-    end
-  end
 
 end
