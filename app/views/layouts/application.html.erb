@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Collective Action</title>
+    <title>Help Our Humans</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -19,10 +19,9 @@
     <div class = "navbar">
         <ul class="myMenu">
           <li><img class="logo" src="<%= asset_path( 'CA-logo.png' ) %>" /></li>
-          <li><%= link_to 'Collective Action', welcome_homepage_path %></li>
-          <li><%=link_to 'Join Us', posts_path%></li>
+          <li><%= link_to 'Help Our Humans', welcome_homepage_path %></li>
+          <li><%=link_to 'Learn More', posts_path%></li>
           <li><a href="http://localhost:3000/pages/donate">Donate</a></li>
-          <li><a href="http://localhost:3000/pages/contact">Contact Us</a></li>
         </ul>
 
         <ul class="userLinks">
